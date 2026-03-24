@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" font-family="Segoe UI, Arial, sans-serif" font-size="14">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#555"/>
+    </marker>
+    <filter id="shadow" x="-4%" y="-4%" width="108%" height="112%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- LLM (planner) -->
+  <rect x="110" y="20" width="200" height="44" rx="8" fill="#4A90D9" filter="url(#shadow)"/>
+  <text x="210" y="47" text-anchor="middle" fill="#fff" font-weight="600">LLM (planner)</text>
+
+  <!-- Arrow 1 + label -->
+  <line x1="210" y1="64" x2="210" y2="104" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="220" y="90" fill="#777" font-size="11">Strategic goals</text>
+
+  <!-- Task / Goal Manager -->
+  <rect x="110" y="106" width="200" height="44" rx="8" fill="#7B68EE" filter="url(#shadow)"/>
+  <text x="210" y="133" text-anchor="middle" fill="#fff" font-weight="600">Task / Goal Manager</text>
+
+  <!-- Arrow 2 -->
+  <line x1="210" y1="150" x2="210" y2="190" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Local policy (SpikyPanda) -->
+  <rect x="85" y="192" width="250" height="44" rx="8" fill="#E8833A" filter="url(#shadow)"/>
+  <text x="210" y="219" text-anchor="middle" fill="#fff" font-weight="600">Local policy (SpikyPanda)</text>
+
+  <!-- Arrow 3 -->
+  <line x1="210" y1="236" x2="210" y2="276" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- Actions -->
+  <rect x="130" y="278" width="160" height="44" rx="8" fill="#50B86C" filter="url(#shadow)"/>
+  <text x="210" y="305" text-anchor="middle" fill="#fff" font-weight="600">Actions</text>
+
+  <!-- Arrow 4 -->
+  <line x1="210" y1="322" x2="210" y2="362" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- World model / simulator -->
+  <rect x="70" y="364" width="280" height="56" rx="8" fill="#D94A6E" filter="url(#shadow)"/>
+  <text x="210" y="388" text-anchor="middle" fill="#fff" font-weight="600">World model / simulator</text>
+  <text x="210" y="408" text-anchor="middle" fill="#ffffffcc" font-size="12">(T → T+1 dynamics)</text>
+
+  <!-- Arrow 5 -->
+  <line x1="210" y1="420" x2="210" y2="460" stroke="#555" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <!-- New state / observations -->
+  <rect x="75" y="462" width="270" height="44" rx="8" fill="#6C757D" filter="url(#shadow)"/>
+  <text x="210" y="489" text-anchor="middle" fill="#fff" font-weight="600">New state / observations</text>
+
+  <!-- Feedback loop arrow -->
+  <path d="M 345 484 C 385 484, 395 250, 395 130 C 395 60, 350 42, 310 42"
+        fill="none" stroke="#aaa" stroke-width="1.2" stroke-dasharray="6 3" marker-end="url(#arrow)"/>
+  <text x="390" y="270" fill="#aaa" font-size="11" writing-mode="tb">feedback loop</text>
+</svg>
